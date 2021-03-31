@@ -1,0 +1,20 @@
+.font-style{
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #E8ECF0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: auto;
+  font-size: 12px;
+  line-height: 14px;
+  text-indent: 0;
+  color: #2D3A41;
+  cursor: pointer;
+  z-index: 10;
+  outline: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  position: relative;
+}

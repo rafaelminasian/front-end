@@ -1,0 +1,108 @@
+.autocomplete{
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  input.autocomplete-value{
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    border: 1px solid #E8ECF0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    text-indent: 15px;
+    color: #2D3A41;
+    padding: 12px 0;
+    cursor: pointer;
+    z-index: 10;
+    outline: none !important;
+    &:active{
+      border: 2px solid #13A4EC;
+    }
+    &:focus{
+      border: 2px solid #13A4EC;
+    }
+  }
+  div.arrow-bottom-icon{
+    position: absolute;
+    top: calc(50% - 8px);
+    transform: translate(-50%);
+    right: 10px;
+    border: 1px solid #E8ECF0;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+    z-index: 0;
+    cursor: pointer;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 4.25px;
+      height: 4.25px;
+      border-bottom: 2px solid #AAB2BB;
+      border-right: 2px solid #AAB2BB;
+      border-bottom-right-radius: 2px;
+      transform: rotate(45deg);
+      left: 4px;
+      top: 3px;
+      z-index: -1;
+    }
+  }
+  .search-modal{
+    position: absolute;
+    top: 0;
+    right: calc(100% + 11px);
+    max-width: 240px;
+    max-height: 369px;
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    border: 2px solid #13A4EC;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    input.search{
+      width: 100%;
+      height: auto;
+      font-size: 13px;
+      line-height: 16px;
+      display: flex;
+      align-items: center;
+      color: #2D3A41;
+      border: none;
+      border-bottom: 1px solid rgba(248,248,248,.5);
+      outline: none;
+      text-indent: 15.5px;
+      padding: 10px 0;
+      &::placeholder{
+        color: rgba(170, 178, 187, 0.7);
+      }
+    }
+    ul.font-list{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      height: 330px;
+      overflow-y: auto;
+      li.font-list-item{
+        font-family: sans-serif;
+        padding: 8px 15.5px;
+        cursor: pointer;
+        transition: all 100ms ease-in-out;
+        color: #333333;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 300;
+        &:hover{
+          background: #13A4EC;
+          color: #fff;
+        }
+      }
+    }
+    &.d-none{
+      display: none !important;
+    }
+  }
+}
