@@ -3,7 +3,7 @@ import "./app.scss"
 import TextArea from "./components/Textarea";
 import Sidebar from "./components/Sidebar";
 import {fetchData, getContent, postContent} from "./service/service";
-import * as WebFont from "webfontloader";
+import WebFont from "webfontloader";
 import Loader from "./components/Loader";
 import Saved from "./components/Saved";
 export const MyContext = React.createContext({})
