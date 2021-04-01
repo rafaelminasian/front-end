@@ -3,7 +3,7 @@ import "./app.scss"
 import TextArea from "./components/Textarea";
 import Sidebar from "./components/Sidebar";
 import {fetchData, getContent, postContent} from "./service/service";
-// import WebFont from "webfontloader";
+import WebFont from "webfontloader";
 import Loader from "./components/Loader";
 import Saved from "./components/Saved";
 export const MyContext = React.createContext({})
@@ -38,22 +38,21 @@ const App = () => {
                     data:{html:getText.body}
                 }
             })
-            setLoading(false)
         })
     },[])
 
-    // useEffect(() => {
-    //     if(globalState.fonts.length) {
-    //         WebFont.load({
-    //             google:{
-    //                 families: globalState.fonts.map((font:any)=>font.family)
-    //             },
-    //             active(): void {
-    //                 setLoading(false)
-    //             }
-    //         })
-    //     }
-    // },[globalState.fonts])
+    useEffect(() => {
+        if(globalState.fonts.length) {
+            WebFont.load({
+                google:{
+                    families: globalState.fonts.map((font:any)=>font.family)
+                },
+                active(): void {
+                    setLoading(false)
+                }
+            })
+        }
+    },[globalState.fonts])
 
 
     const saveChanges = () => {
