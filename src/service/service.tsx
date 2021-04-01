@@ -2,9 +2,9 @@ export const fetchData = fetch('https://www.googleapis.com/webfonts/v1/webfonts?
     .then(response => response.json())
 
 
-export const getContent = fetch('https://jsonplaceholder.typicode.com/comments/1').then(response => response.json());
+export const getContent = fetch('https://rhubarb-custard-78604.herokuapp.com/public/api/get').then(response => response.json());
 
-export const postContent = (data: any) => fetch('http://127.0.0.1:8000/api/post',
+export const postContent = (data: any) => fetch('https://rhubarb-custard-78604.herokuapp.com/public/api/post',
     {
         headers: {
             'Content-Type': 'application/json',

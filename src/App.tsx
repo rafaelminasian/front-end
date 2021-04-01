@@ -35,7 +35,7 @@ const App = () => {
             setGlobalState(prevState => {
                 return{
                     ...prevState,
-                    data:{html:getText.body}
+                    data:{html:getText[0].text}
                 }
             })
         })
@@ -57,7 +57,7 @@ const App = () => {
 
     const saveChanges = () => {
         postContent({text: globalState.data.html}).then(res => {
-            if(res.status === 200){
+            if(res.status >= 200 && res.status <=300){
                 setDone(true)
                 setTimeout(()=>{
                     setDone(false)
