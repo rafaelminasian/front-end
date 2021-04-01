@@ -35,7 +35,7 @@ const App = () => {
             setGlobalState(prevState => {
                 return{
                     ...prevState,
-                    data:{html:getText[0].text}
+                    data:{html:getText.body}
                 }
             })
             setLoading(false)

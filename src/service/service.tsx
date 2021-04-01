@@ -2,7 +2,7 @@ export const fetchData = fetch('https://www.googleapis.com/webfonts/v1/webfonts?
     .then(response => response.json())
 
 
-export const getContent = fetch('http://127.0.0.1:8000/api/get').then(response => response.json());
+export const getContent = fetch('https://jsonplaceholder.typicode.com/comments/1').then(response => response.json());
 
 export const postContent = (data: any) => fetch('http://127.0.0.1:8000/api/post',
     {
