@@ -38,7 +38,9 @@ const App = () => {
                     data:{html:getText[0].text}
                 }
             })
-        })
+        }).then(() => {
+            setLoading(false)
+        });
     },[])
 
     // useEffect(() => {
