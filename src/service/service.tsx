@@ -1,4 +1,4 @@
-export const fetchData = fetch('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyD0U05SvtznlDBoKdePVTU8XUkZzPJEqTA')
+export const getFonts = fetch('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyD0U05SvtznlDBoKdePVTU8XUkZzPJEqTA')
     .then(response => response.json())
 
 

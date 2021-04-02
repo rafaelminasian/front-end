@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import "./app.scss"
 import TextArea from "./components/Textarea";
 import Sidebar from "./components/Sidebar";
-import {fetchData, getContent, postContent} from "./service/service";
+import {getFonts, getContent, postContent} from "./service/service";
 import WebFont from "webfontloader";
 import Loader from "./components/Loader";
 import Saved from "./components/Saved";
@@ -20,7 +20,7 @@ const App = () => {
     const [loading, setLoading] = useState(true);
     const [done, setDone] = useState(false)
     useEffect(() => {
-        fetchData.then(data => {
+        getFonts.then(data => {
             setGlobalState((prevState) => {
                 return {
                     ...prevState,
@@ -32,12 +32,14 @@ const App = () => {
 
     useEffect(()=>{
         getContent.then(getText => {
-            setGlobalState(prevState => {
-                return{
-                    ...prevState,
-                    data:{html:getText[0].text}
-                }
-            })
+            if(getText.length){
+                setGlobalState(prevState => {
+                    return{
+                        ...prevState,
+                        data:{html:getText[0].text}
+                    }
+                })
+            }
         })
     },[])
 
